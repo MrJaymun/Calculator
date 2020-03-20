@@ -9,7 +9,7 @@ public class Calc extends Compf{
     @Override
     protected int symOther(char c){
         int n = 0;
-        if(c < '0' || c > '9' && c < 'a' || c > 'f'){
+        if(c < '0' && c > '9' || c < 'a' && c > 'f' && c < 'A' && c > 'F'){
             System.out.println("Недопустимый символ: " + c);
 
             System.exit(0);
@@ -54,7 +54,7 @@ public class Calc extends Compf{
 
         }
 
-        if(c == 'a'){
+        if(c == 'a' || c == 'A'){
             if (count == 1) {
                 s.push(10);
                 //s.push(Character.getNumericValue(c));
@@ -63,7 +63,7 @@ public class Calc extends Compf{
                 s.push(s.pop() * 16 + 10);
             }
         }
-        if(c == 'b'){
+        if(c == 'b'|| c == 'B'){
             if (count == 1) {
                 s.push(11);
                 //s.push(Character.getNumericValue(c));
@@ -72,7 +72,7 @@ public class Calc extends Compf{
                 s.push(s.pop() * 16 + 11);
             }
         }
-        if(c == 'c'){
+        if(c == 'c'|| c == 'C'){
             if (count == 1) {
                 s.push(12);
                 //s.push(Character.getNumericValue(c));
@@ -81,7 +81,7 @@ public class Calc extends Compf{
                 s.push(s.pop() * 16 + 12);
             }
         }
-        if(c == 'd'){
+        if(c == 'd'|| c == 'D'){
             if (count == 1) {
                 s.push(13);
                 //s.push(Character.getNumericValue(c));
@@ -90,7 +90,7 @@ public class Calc extends Compf{
                 s.push(s.pop() * 16 + 13);
             }
         }
-        if(c == 'e'){
+        if(c == 'e' || c == 'E'){
             if (count == 1) {
                 s.push(14);
                 //s.push(Character.getNumericValue(c));
@@ -99,7 +99,7 @@ public class Calc extends Compf{
                 s.push(s.pop() * 16 + 14);
             }
         }
-        if(c == 'f'){
+        if(c == 'f'|| c == 'F'){
             if (count == 1) {
                 s.push(15);
                 //s.push(Character.getNumericValue(c));
